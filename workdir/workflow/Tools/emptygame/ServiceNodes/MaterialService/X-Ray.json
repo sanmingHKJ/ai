@@ -1,0 +1,157 @@
+{
+	"ClassID": 127,
+	"ClassType": "Material",
+	"NodeId": "11006",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "X-Ray",
+	"reflex": [
+		{
+			"Name": "X-Ray" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"DepthFunc": 0 
+		},
+		{
+			"DepthWrite": 0 
+		},
+		{
+			"RenderGroup": 128 
+		},
+		{
+			"CullMode": 2 
+		},
+		{
+			"BaseMaterial": 5 
+		},
+		{
+			"TemplateIndex": 5 
+		},
+		{
+			"MainTexture": "" 
+		},
+		{
+			"MainTextureTileScale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"MainTextureTileOffset": [
+				0,
+				0 
+			] 
+		},
+		{
+			"SpecScale": 1 
+		},
+		{
+			"SpecIntensity": 1 
+		},
+		{
+			"ShadowColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"AlphaTransparent": 1 
+		},
+		{
+			"RGBATransparent": 1 
+		},
+		{
+			"EnableEmissive": false 
+		},
+		{
+			"EmissiveTexture": "" 
+		},
+		{
+			"EmissiveTextureColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"GlitterSpeed": 1 
+		},
+		{
+			"GlitterPower": 1 
+		},
+		{
+			"ShadowPowerMin": 0.800000011920929 
+		},
+		{
+			"ShadowPowerMax": 1.100000023841858 
+		},
+		{
+			"Brightness": 0 
+		},
+		{
+			"StepAmount": 0 
+		},
+		{
+			"OnStep": 0 
+		},
+		{
+			"InnerColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"EnableRimColor": false 
+		},
+		{
+			"RimWidth": 0 
+		},
+		{
+			"RimIntensity": 0 
+		},
+		{
+			"RimColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"NormalTexture": "" 
+		},
+		{
+			"DiffuseIns": 0.6000000238418579 
+		},
+		{
+			"ShadowIns": 0.5400000214576721 
+		} 
+	] 
+} 

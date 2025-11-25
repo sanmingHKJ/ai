@@ -1,0 +1,38 @@
+{
+	"ClassID": 574,
+	"ClassType": "SandboxLocalizationService",
+	"NodeId": "76",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "Localization",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"LocaleIdConfig": "{\"config\":[] } " 
+		},
+		{
+			"LocaleIdConfigField": 1772892192768 
+		} 
+	] 
+} 

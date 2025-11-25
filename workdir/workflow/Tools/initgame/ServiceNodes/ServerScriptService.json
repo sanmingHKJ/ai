@@ -1,0 +1,32 @@
+{
+	"ClassID": 91,
+	"ClassType": "ServerScriptService",
+	"NodeId": "30",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "ServerScriptService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 1 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

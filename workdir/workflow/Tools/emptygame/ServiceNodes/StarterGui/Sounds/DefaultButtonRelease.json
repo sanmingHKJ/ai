@@ -1,0 +1,82 @@
+{
+	"ClassID": 173,
+	"ClassType": "Sound",
+	"NodeId": "15831",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "DefaultButtonRelease",
+	"reflex": [
+		{
+			"Name": "DefaultButtonRelease" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 1 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"SoundPath": "" 
+		},
+		{
+			"Volume": 1 
+		},
+		{
+			"IsLoop": false 
+		},
+		{
+			"PlayOnRemove": false 
+		},
+		{
+			"TransObject": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		},
+		{
+			"FixPos": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"IsFixPosPlay": false 
+		},
+		{
+			"RollOffMode": 0 
+		},
+		{
+			"RollOffMaxDistance": 6000 
+		},
+		{
+			"RollOffMinDistance": 600 
+		},
+		{
+			"SoundPosition": 0 
+		},
+		{
+			"Pitch": 1 
+		},
+		{
+			"SoundLength": 0 
+		} 
+	] 
+} 

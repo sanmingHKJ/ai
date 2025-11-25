@@ -1,0 +1,53 @@
+{
+	"ClassID": 559,
+	"ClassType": "BehaviorItem",
+	"NodeId": "11038",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "SitDownBehavior",
+	"reflex": [
+		{
+			"Name": "SitDownBehavior" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"BehaviorID": 11 
+		},
+		{
+			"SkeletonType": 2 
+		},
+		{
+			"LegacyAnimationID": 0 
+		},
+		{
+			"AnimatorStateLayer": 0 
+		},
+		{
+			"AnimatorStateName": "Base Layer.Sit" 
+		},
+		{
+			"LegacyAutoStop": true 
+		} 
+	] 
+} 

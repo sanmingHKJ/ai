@@ -1,0 +1,17 @@
+{
+	"ClassType": "ModuleScript",
+	"realNodeName": "CombatSystemServer",
+	"attribute": [],
+	"flags": 0,
+	"reflex": [
+		{
+			"Name": "CombatSystemServer"
+		},
+		{
+			"Tag": 0
+		},
+		{
+			"Enabled": true
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"ClassID": 561,
+	"ClassType": "OnlyOneBehaviorGroup",
+	"NodeId": "11026",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "MoveGroup",
+	"reflex": [
+		{
+			"Name": "MoveGroup" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"GroupID": 2 
+		} 
+	] 
+} 

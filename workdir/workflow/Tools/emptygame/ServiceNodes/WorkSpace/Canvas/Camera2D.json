@@ -1,0 +1,56 @@
+{
+	"ClassID": 592,
+	"ClassType": "Camera2D",
+	"NodeId": "15876",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "Camera2D",
+	"reflex": [
+		{
+			"Name": "Camera2D" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"LocalPosition": [
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalScale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"LocalRotation": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"Order": 0 
+		} 
+	] 
+} 

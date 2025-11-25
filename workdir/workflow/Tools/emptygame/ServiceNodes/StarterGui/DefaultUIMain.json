@@ -1,0 +1,44 @@
+{
+	"ClassID": 149,
+	"ClassType": "UIRoot",
+	"NodeId": "11045",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "DefaultUIMain",
+	"reflex": [
+		{
+			"Name": "DefaultUIMain" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"RenderIndex": 999 
+		},
+		{
+			"Locked": false 
+		} 
+	] 
+} 

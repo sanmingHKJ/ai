@@ -1,0 +1,35 @@
+{
+	"ClassID": 1,
+	"ClassType": "SandboxNode",
+	"NodeId": "79",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "ConfigClassGroup",
+	"reflex": [
+		{
+			"Name": "ConfigClassGroup" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

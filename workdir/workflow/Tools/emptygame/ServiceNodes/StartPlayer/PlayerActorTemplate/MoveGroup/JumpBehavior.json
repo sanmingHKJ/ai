@@ -1,0 +1,53 @@
+{
+	"ClassID": 559,
+	"ClassType": "BehaviorItem",
+	"NodeId": "11034",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "JumpBehavior",
+	"reflex": [
+		{
+			"Name": "JumpBehavior" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"BehaviorID": 7 
+		},
+		{
+			"SkeletonType": 2 
+		},
+		{
+			"LegacyAnimationID": 100109 
+		},
+		{
+			"AnimatorStateLayer": 0 
+		},
+		{
+			"AnimatorStateName": "Base Layer.Jump" 
+		},
+		{
+			"LegacyAutoStop": false 
+		} 
+	] 
+} 

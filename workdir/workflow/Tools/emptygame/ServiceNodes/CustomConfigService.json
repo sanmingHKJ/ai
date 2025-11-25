@@ -1,0 +1,32 @@
+{
+	"ClassID": 577,
+	"ClassType": "CustomConfigService",
+	"NodeId": "77",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "CustomConfigService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 2 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

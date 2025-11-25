@@ -1,0 +1,300 @@
+# Root of systems spec file
+systems_spec:
+  # Optional high-level metadata
+  metadata:
+    version: "1.0"
+    game_name: "MOBA Sample"
+    notes: "Demonstrates all 4 trigger types: action, event, timer, init"
+
+  # List of system specifications
+  systems:
+    - id: HeroSystem
+      role: "character"
+
+      data:
+        entities:
+          - name: HeroInstance
+            fields:
+              hero_id: "HeroId"
+              owner_player_id: "PlayerId"
+              level: "int"
+              xp: "int"
+              hp_current: "int"
+              mana_current: "int"
+              position: "vec2"
+              is_dead: "bool"
+
+      interface:
+        player_actions:
+          - id: ACTION_HERO_MOVE
+            input: { target_position: "vec2" }
+            effect_summary: "Move hero to target position."
+
+          - id: ACTION_HERO_LEVEL_UP
+            input: { hero_instance_id: "HeroInstanceId" }
+            effect_summary: "Increase level and grant ability points."
+
+        queries:
+          - id: GET_MAX_HP
+            returns: "int"
+            args: { hero_instance_id: "HeroInstanceId" }
+            summary: "Compute max HP based on level."
+
+          - id: GET_HERO_POSITION
+            returns: "vec2"
+            args: { hero_instance_id: "HeroInstanceId" }
+            summary: "Get current hero position."
+
+        commands:
+          - id: REVIVE_HERO
+            args: { hero_instance_id: "HeroInstanceId", revive_position: "vec2" }
+            summary: "Revive the hero at the position."
+
+          - id: INIT_DEFAULT_STATS
+            args: {}
+            summary: "Initialize default hero stat tables."
+
+      events:
+        emits:
+          - id: HERO_LEVEL_UP
+            payload: { hero_instance_id: "HeroInstanceId", new_level: "int" }
+
+          - id: HERO_REVIVED
+            payload: { hero_instance_id: "HeroInstanceId" }
+
+        subscribes:
+          - event: XP_GAINED
+            from: XPSystem
+            summary: "Gain XP and handle level-up logic."
+
+          - event: HERO_DEATH_TIMER_FINISHED
+            from: RespawnSystem
+            summary: "Respawn hero when timer completes."
+
+      behaviors:
+        # ============================================================
+        # TRIGGER TYPE 1: on_init
+        # Called once when the system is loaded or match begins.
+        # Used for: initialization, loading configs, setting up data structures
+        # ============================================================
+        - id: "setup_hero_system"
+          trigger:
+            type: "init"
+          summary: "Initialize hero system with default stats and configurations."
+          steps:
+            - op: "command"
+              system: HeroSystem
+              name: INIT_DEFAULT_STATS
+              args: {}
+
+        # ============================================================
+        # TRIGGER TYPE 2: on_action
+        # Triggered when a player performs an action.
+        # Used for: player input handling, intentional player actions
+        # Maps to: interface.player_actions
+        # ============================================================
+        - id: "on_hero_move"
+          trigger:
+            type: "action"
+            name: "ACTION_HERO_MOVE"
+          summary: "Handle player move command by updating hero position."
+          steps:
+            - op: "command"
+              system: NavSystem
+              name: SET_PATH
+              args: { hero_id: "hero_id", target_pos: "target_position" }
+
+        # ============================================================
+        # TRIGGER TYPE 3: on_event
+        # Triggered when another system emits an event.
+        # Used for: system-to-system communication, reactive logic
+        # Maps to: events.subscribes
+        # ============================================================
+        - id: "on_death_timer_finished"
+          trigger:
+            type: "event"
+            name: "HERO_DEATH_TIMER_FINISHED"
+          summary: "Revive hero when respawn timer ends."
+          steps:
+            - op: "query"
+              system: RespawnSystem
+              name: GET_RESPAWN_POSITION
+              args: { hero_instance_id: "hero_id" }
+              assign_to: "revive_pos"
+
+            - op: "command"
+              system: HeroSystem
+              name: REVIVE_HERO
+              args: { hero_instance_id: "hero_id", revive_position: "revive_pos" }
+
+            - op: "emit"
+              system: HeroSystem
+              name: HERO_REVIVED
+              args: { hero_instance_id: "hero_id" }
+
+        - id: "on_xp_gained"
+          trigger:
+            type: "event"
+            name: "XP_GAINED"
+          summary: "Apply XP and check for level-up."
+          steps:
+            - op: "query"
+              system: XPSystem
+              name: GET_XP_FOR_NEXT_LEVEL
+              args: { hero_instance_id: "hero_id" }
+              assign_to: "xp_required"
+
+            - op: "if_true"
+              cond: "current_xp >= xp_required"
+              then:
+                - op: "command"
+                  system: HeroSystem
+                  name: LEVEL_UP
+                  args: { hero_instance_id: "hero_id" }
+
+                - op: "emit"
+                  system: HeroSystem
+                  name: HERO_LEVEL_UP
+                  args: { hero_instance_id: "hero_id", new_level: "new_level" }
+
+        # ============================================================
+        # TRIGGER TYPE 4: on_timer
+        # Triggered periodically by the runtime.
+        # Used for: DOT effects, regen, respawn checks, periodic AI
+        # ============================================================
+        - id: "check_respawn_ready"
+          trigger:
+            type: "timer"
+            name: "match_tick"
+            every: 0.2
+          summary: "Periodically check if any dead heroes are ready to respawn."
+          steps:
+            - op: "query"
+              system: RespawnSystem
+              name: CHECK_RESPAWN_READY
+              args: { hero_id: "hero_id" }
+              assign_to: "ready"
+
+            - op: "if_true"
+              cond: "ready"
+              then:
+                - op: "command"
+                  system: HeroSystem
+                  name: REVIVE_HERO
+                  args: { hero_id: "hero_id" }
+
+    # ============================================================
+    # Second system showing combat-related trigger examples
+    # ============================================================
+    - id: CombatSystem
+      role: "combat"
+
+      data:
+        entities:
+          - name: DamageInstance
+            fields:
+              source_id: "EntityId"
+              target_id: "EntityId"
+              amount: "int"
+              damage_type: "string"
+
+      interface:
+        player_actions:
+          - id: ACTION_ATTACK
+            input: { target_id: "EntityId" }
+            effect_summary: "Attack the target entity and deal damage."
+
+        queries:
+          - id: GET_DAMAGE_MULTIPLIER
+            returns: "float"
+            args: { attacker_id: "EntityId" }
+            summary: "Get damage multiplier based on buffs and stats."
+
+        commands:
+          - id: APPLY_DAMAGE
+            args: { target_id: "EntityId", amount: "int" }
+            summary: "Apply damage to target and emit damage event."
+
+          - id: INIT_DAMAGE_TABLES
+            args: {}
+            summary: "Initialize damage calculation tables."
+
+      events:
+        emits:
+          - id: HERO_DAMAGED
+            payload: { target_id: "EntityId", amount: "int", source_id: "EntityId" }
+
+          - id: HERO_KILLED
+            payload: { target_id: "EntityId", killer_id: "EntityId" }
+
+        subscribes:
+          - event: BUFF_APPLIED
+            from: BuffSystem
+            summary: "Update damage modifiers when buffs change."
+
+      behaviors:
+        # on_init: Setup damage calculation tables
+        - id: "init_combat_system"
+          trigger:
+            type: "init"
+          summary: "Initialize combat system with damage calculation tables."
+          steps:
+            - op: "command"
+              system: CombatSystem
+              name: INIT_DAMAGE_TABLES
+              args: {}
+
+        # on_action: Player attack action
+        - id: "on_attack_action"
+          trigger:
+            type: "action"
+            name: "ACTION_ATTACK"
+          summary: "Calculate and apply damage when player attacks."
+          steps:
+            - op: "query"
+              system: CombatSystem
+              name: GET_DAMAGE_MULTIPLIER
+              args: { attacker_id: "attacker_id" }
+              assign_to: "multiplier"
+
+            - op: "command"
+              system: CombatSystem
+              name: APPLY_DAMAGE
+              args: { target_id: "target_id", amount: "base_damage * multiplier" }
+
+            - op: "emit"
+              system: CombatSystem
+              name: HERO_DAMAGED
+              args: { target_id: "target_id", amount: "final_damage", source_id: "attacker_id" }
+
+        # on_event: React to buff changes
+        - id: "on_buff_applied"
+          trigger:
+            type: "event"
+            name: "BUFF_APPLIED"
+          summary: "Recalculate damage modifiers when buffs are applied."
+          steps:
+            - op: "query"
+              system: BuffSystem
+              name: GET_DAMAGE_MODIFIER
+              args: { entity_id: "target_id" }
+              assign_to: "new_modifier"
+
+        # on_timer: Process damage-over-time effects
+        - id: "process_dot_effects"
+          trigger:
+            type: "timer"
+            name: "match_tick"
+            every: 1.0
+          summary: "Apply periodic damage from poison, burn, and other DOT effects."
+          steps:
+            - op: "query"
+              system: BuffSystem
+              name: GET_ACTIVE_DOTS
+              args: {}
+              assign_to: "dot_list"
+
+            - op: "command"
+              system: CombatSystem
+              name: APPLY_DAMAGE
+              args: { target_id: "dot.target_id", amount: "dot.damage_per_tick" }

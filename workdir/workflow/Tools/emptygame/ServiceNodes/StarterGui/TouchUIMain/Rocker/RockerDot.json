@@ -1,0 +1,171 @@
+{
+	"ClassID": 145,
+	"ClassType": "UIImage",
+	"NodeId": "11043",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "RockerDot",
+	"reflex": [
+		{
+			"Name": "RockerDot" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"RenderIndex": 0 
+		},
+		{
+			"Locked": false 
+		},
+		{
+			"Size": [
+				193,
+				193 
+			] 
+		},
+		{
+			"Scale": [
+				0.5,
+				0.5 
+			] 
+		},
+		{
+			"Rotation": 0 
+		},
+		{
+			"Pivot": [
+				0.5,
+				0.5 
+			] 
+		},
+		{
+			"IsKeepPosWhenPivotChange": false 
+		},
+		{
+			"IsNotifyEventStop": true 
+		},
+		{
+			"LineColor": [
+				0,
+				0,
+				0,
+				1 
+			] 
+		},
+		{
+			"FillColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LineSize": 2 
+		},
+		{
+			"ClickPass": true 
+		},
+		{
+			"LayoutHRelation": 0 
+		},
+		{
+			"LayoutVRelation": 0 
+		},
+		{
+			"LayoutSizeRelation": 0 
+		},
+		{
+			"HRelationLength": 96.5 
+		},
+		{
+			"VRelationLength": 96.5 
+		},
+		{
+			"WidthRelationLength": 10000000 
+		},
+		{
+			"HeightRelationLength": 10000000 
+		},
+		{
+			"Active": false 
+		},
+		{
+			"Grayed": false 
+		},
+		{
+			"Icon": "sandboxSysId:\/\/ministudio\/ui\/operating_dot.png" 
+		},
+		{
+			"FillMethod": 0 
+		},
+		{
+			"FillOrigin": 0 
+		},
+		{
+			"FillClockwise": false 
+		},
+		{
+			"FillAmount": 1 
+		},
+		{
+			"IsAutoSize": false 
+		},
+		{
+			"Alpha": 1 
+		},
+		{
+			"ScaleType": 0 
+		},
+		{
+			"Scale9Grid": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"AutoTranslator": false 
+		},
+		{
+			"MaskUI": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		},
+		{
+			"BlurFilter": false 
+		},
+		{
+			"BlurSigma": 3 
+		},
+		{
+			"UIMaskMode": false 
+		} 
+	] 
+} 

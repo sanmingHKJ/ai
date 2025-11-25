@@ -1,0 +1,43 @@
+{
+	"ClassID": 87,
+	"ClassType": "ModuleScript",
+	"NodeId": "53972621",
+	"attribute": [],
+	"flags": 0,
+	"realNodeName": "UILog",
+	"reflex": [
+		{
+			"Name": "UILog"
+		},
+		{
+			"Tag": 0
+		},
+		{
+			"Enabled": true
+		},
+		{
+			"SyncMode": 0
+		},
+		{
+			"LocalSyncFlag": 0
+		},
+		{
+			"ResourceDynamicLoad": false
+		},
+		{
+			"IgnoreSafeMode": false
+		},
+		{
+			"ResourceLoadMode": 0
+		},
+		{
+			"Scriptid": 0
+		},
+		{
+			"Mode": 1
+		},
+		{
+			"Luafile": ""
+		}
+	]
+}

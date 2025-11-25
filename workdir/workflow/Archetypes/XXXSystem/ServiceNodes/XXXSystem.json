@@ -1,0 +1,32 @@
+{
+	"ClassType": "SandboxNode",
+	"realNodeName": "CombatSystem",
+	"attribute": [],
+	"flags": 0,
+	"reflex": [
+		{
+			"Name": "CombatSystem"
+		},
+		{
+			"Tag": 0
+		},
+		{
+			"Enabled": true
+		},
+		{
+			"SyncMode": 0
+		},
+		{
+			"LocalSyncFlag": 0
+		},
+		{
+			"ResourceDynamicLoad": false
+		},
+		{
+			"IgnoreSafeMode": false
+		},
+		{
+			"ResourceLoadMode": 0
+		}
+	]
+}

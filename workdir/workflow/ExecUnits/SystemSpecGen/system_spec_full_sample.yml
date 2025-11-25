@@ -1,0 +1,136 @@
+# Sample Full System Specification
+# This shows a complete system spec with all sections and all 4 trigger types
+
+system_spec:
+  id: "CombatSystem"
+  role: "combat"
+
+  data:
+    entities:
+      - name: "DamageInstance"
+        fields:
+          source_id: "EntityId"
+          target_id: "EntityId"
+          amount: "int"
+          damage_type: "string"
+          timestamp: "float"
+
+  interface:
+    player_actions:
+      - id: "ACTION_ATTACK"
+        input: { target_id: "EntityId" }
+        effect_summary: "Attack the target entity and deal damage."
+
+    queries:
+      - id: "GET_DAMAGE_MULTIPLIER"
+        returns: "float"
+        args: { attacker_id: "EntityId" }
+        summary: "Get damage multiplier based on buffs and stats."
+
+      - id: "IS_ALIVE"
+        returns: "bool"
+        args: { entity_id: "EntityId" }
+        summary: "Check if entity is alive."
+
+    commands:
+      - id: "APPLY_DAMAGE"
+        args: { target_id: "EntityId", amount: "int" }
+        summary: "Apply damage to target and emit damage event."
+
+  events:
+    emits:
+      - id: "HERO_DAMAGED"
+        payload: { target_id: "EntityId", amount: "int" }
+
+      - id: "HERO_KILLED"
+        payload: { target_id: "EntityId", killer_id: "EntityId" }
+
+    subscribes:
+      - event: "ATTACK_INPUT"
+        from: "InputSystem"
+        summary: "Process attack input and initiate damage calculation."
+
+      - event: "BUFF_APPLIED"
+        from: "BuffSystem"
+        summary: "Recalculate damage modifiers when buffs change."
+
+  behaviors:
+    # Trigger Type 1: on_init - System initialization
+    - id: "init_combat_system"
+      trigger:
+        type: "init"
+      summary: "Initialize combat system with default damage formulas and tables."
+      steps:
+        - op: "command"
+          system: "CombatSystem"
+          name: "LOAD_DAMAGE_TABLES"
+          args: {}
+
+    # Trigger Type 2: on_action - Player input
+    - id: "on_player_attack"
+      trigger:
+        type: "action"
+        name: "ACTION_ATTACK"
+      summary: "Handle player attack action with validation and execution."
+      steps:
+        - op: "query"
+          system: "CombatSystem"
+          name: "IS_ALIVE"
+          args: { entity_id: "target_id" }
+          assign_to: "target_alive"
+
+        - op: "if_true"
+          cond: "target_alive"
+          then:
+            - op: "query"
+              system: "CombatSystem"
+              name: "GET_DAMAGE_MULTIPLIER"
+              args: { attacker_id: "attacker_id" }
+              assign_to: "multiplier"
+
+            - op: "command"
+              system: "CombatSystem"
+              name: "APPLY_DAMAGE"
+              args: { target_id: "target_id", amount: "base_damage * multiplier" }
+
+    # Trigger Type 3: on_event - React to other systems
+    - id: "on_attack_input"
+      trigger:
+        type: "event"
+        name: "ATTACK_INPUT"
+      summary: "Calculate and apply damage when attack event is received."
+      steps:
+        - op: "query"
+          system: "CombatSystem"
+          name: "GET_DAMAGE_MULTIPLIER"
+          args: { attacker_id: "attacker_id" }
+          assign_to: "multiplier"
+
+        - op: "command"
+          system: "CombatSystem"
+          name: "APPLY_DAMAGE"
+          args: { target_id: "target_id", amount: "base_damage * multiplier" }
+
+        - op: "emit"
+          system: "CombatSystem"
+          name: "HERO_DAMAGED"
+          args: { target_id: "target_id", amount: "final_damage" }
+
+    # Trigger Type 4: on_timer - Periodic updates
+    - id: "process_dot_effects"
+      trigger:
+        type: "timer"
+        name: "match_tick"
+        every: 1.0
+      summary: "Apply periodic damage from poison, burn, and other DOT effects."
+      steps:
+        - op: "query"
+          system: "BuffSystem"
+          name: "GET_ACTIVE_DOTS"
+          args: {}
+          assign_to: "dot_list"
+
+        - op: "command"
+          system: "CombatSystem"
+          name: "APPLY_DAMAGE"
+          args: { target_id: "dot.target_id", amount: "dot.damage_per_tick" }

@@ -1,0 +1,53 @@
+{
+	"ClassID": 559,
+	"ClassType": "BehaviorItem",
+	"NodeId": "11033",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "WalkBehavior",
+	"reflex": [
+		{
+			"Name": "WalkBehavior" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"BehaviorID": 6 
+		},
+		{
+			"SkeletonType": 2 
+		},
+		{
+			"LegacyAnimationID": 100101 
+		},
+		{
+			"AnimatorStateLayer": 0 
+		},
+		{
+			"AnimatorStateName": "Base Layer.Run" 
+		},
+		{
+			"LegacyAutoStop": true 
+		} 
+	] 
+} 

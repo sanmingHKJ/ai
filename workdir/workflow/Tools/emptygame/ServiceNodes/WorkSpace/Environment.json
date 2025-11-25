@@ -1,0 +1,53 @@
+{
+	"ClassID": 164,
+	"ClassType": "Environment",
+	"NodeId": "11072",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "Environment",
+	"reflex": [
+		{
+			"Name": "Environment" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Weather": 0 
+		},
+		{
+			"Gravity": 0 
+		},
+		{
+			"LockTimeHour": true 
+		},
+		{
+			"OpenMiniCraftRender": false 
+		},
+		{
+			"TimeHour": 14 
+		},
+		{
+			"UsePlatformTextureMinimumMetaVersion": 1 
+		} 
+	] 
+} 

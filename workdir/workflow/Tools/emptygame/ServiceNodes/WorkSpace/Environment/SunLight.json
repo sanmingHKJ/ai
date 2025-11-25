@@ -1,0 +1,106 @@
+{
+	"ClassID": 529,
+	"ClassType": "SunLight",
+	"NodeId": "11076",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "SunLight",
+	"reflex": [
+		{
+			"Name": "SunLight" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Intensity": 1 
+		},
+		{
+			"Color": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LockTimeDir": true 
+		},
+		{
+			"Euler": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"ShadowBias": 0.3499999940395355 
+		},
+		{
+			"ShadowSlopeBias": 0.4000000059604645 
+		},
+		{
+			"ShadowDistance": 2500 
+		},
+		{
+			"SunRaysActive": false 
+		},
+		{
+			"SunRaysScale": 0.449999988079071 
+		},
+		{
+			"SunRaysThreahold": 0.5 
+		},
+		{
+			"SunRaysColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"UseCustomSunAndMoonTex": false 
+		},
+		{
+			"SunTex": "" 
+		},
+		{
+			"SunScale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"MoonTex": "" 
+		},
+		{
+			"MoonScale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"ShadowCascadeCount": 1 
+		} 
+	] 
+} 

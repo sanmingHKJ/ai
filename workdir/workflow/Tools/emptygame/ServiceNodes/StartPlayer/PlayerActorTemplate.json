@@ -1,0 +1,234 @@
+{
+	"ClassID": 114,
+	"ClassType": "Actor",
+	"NodeId": "11010",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "PlayerActorTemplate",
+	"reflex": [
+		{
+			"Name": "PlayerActorTemplate" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": true 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 2 
+		},
+		{
+			"Euler": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalPosition": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalEuler": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalScale": [
+				1,
+				1,
+				1 
+			] 
+		},
+		{
+			"LocalRotation": [
+				0,
+				0,
+				0,
+				1 
+			] 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"CubeBorderEnable": false 
+		},
+		{
+			"CubeBorderColor": [
+				135,
+				206,
+				250,
+				255 
+			] 
+		},
+		{
+			"Layer": 0 
+		},
+		{
+			"LayerCoverChild": true 
+		},
+		{
+			"InheritParentVisible": true 
+		},
+		{
+			"Locked": false 
+		},
+		{
+			"DimensionUnit": 0 
+		},
+		{
+			"MaterialType": 0 
+		},
+		{
+			"TextureId": "" 
+		},
+		{
+			"Color": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"ModelId": "sandboxSysId:\/\/ministudio\/entity\/player\/defaultplayer\/body.prefab" 
+		},
+		{
+			"Friction": 0.9100000262260437 
+		},
+		{
+			"Velocity": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"Size": [
+				173.0773468017578,
+				162.8129577636719,
+				88.28646850585938 
+			] 
+		},
+		{
+			"Center": [
+				-34.14197540283203,
+				81.18464660644531,
+				10.25127220153809 
+			] 
+		},
+		{
+			"EnablePhysics": true 
+		},
+		{
+			"CollideGroupID": 1 
+		},
+		{
+			"CullLayer": 0 
+		},
+		{
+			"IgnoreStreamSync": false 
+		},
+		{
+			"TextureMode": 0 
+		},
+		{
+			"TextureOverride": true 
+		},
+		{
+			"CastShadow": true 
+		},
+		{
+			"CanRideOn": false 
+		},
+		{
+			"DrawPhysicsCollider": false 
+		},
+		{
+			"ReceiveShadow": true 
+		},
+		{
+			"CanBePushed": false 
+		},
+		{
+			"OutlineActive": false 
+		},
+		{
+			"OutlineColorIndex": 0 
+		},
+		{
+			"Climbable": false 
+		},
+		{
+			"Movespeed": 400 
+		},
+		{
+			"MaxHealth": 100 
+		},
+		{
+			"Health": 100 
+		},
+		{
+			"UseCameraAngle": false 
+		},
+		{
+			"AutoRotate": true 
+		},
+		{
+			"UserId": 0 
+		},
+		{
+			"Gravity": 980 
+		},
+		{
+			"StepOffset": 100 
+		},
+		{
+			"CanAutoJump": false 
+		},
+		{
+			"SkinId": -1 
+		},
+		{
+			"SlopeLimit": 45 
+		},
+		{
+			"JumpBaseSpeed": 400 
+		},
+		{
+			"JumpContinueSpeed": 0 
+		},
+		{
+			"RunSpeedFactor": 1.5 
+		},
+		{
+			"CanPushOthers": false 
+		},
+		{
+			"PhysXRoleType": 1 
+		},
+		{
+			"StandardSkeleton": 2 
+		} 
+	] 
+} 

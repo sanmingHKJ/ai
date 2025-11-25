@@ -1,0 +1,43 @@
+{
+	"ClassID": 87,
+	"ClassType": "ModuleScript",
+	"NodeId": "5647443214",
+	"attribute": [],
+	"flags": 0,
+	"realNodeName": "UITween",
+	"reflex": [
+		{
+			"Name": "UITween"
+		},
+		{
+			"Tag": 0
+		},
+		{
+			"Enabled": true
+		},
+		{
+			"SyncMode": 0
+		},
+		{
+			"LocalSyncFlag": 0
+		},
+		{
+			"ResourceDynamicLoad": false
+		},
+		{
+			"IgnoreSafeMode": false
+		},
+		{
+			"ResourceLoadMode": 0
+		},
+		{
+			"Scriptid": 0
+		},
+		{
+			"Mode": 1
+		},
+		{
+			"Luafile": ""
+		}
+	]
+}

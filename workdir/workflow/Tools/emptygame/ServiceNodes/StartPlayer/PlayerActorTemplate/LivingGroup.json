@@ -1,0 +1,38 @@
+{
+	"ClassID": 561,
+	"ClassType": "OnlyOneBehaviorGroup",
+	"NodeId": "11025",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "LivingGroup",
+	"reflex": [
+		{
+			"Name": "LivingGroup" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"GroupID": 1 
+		} 
+	] 
+} 

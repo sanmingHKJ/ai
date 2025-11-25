@@ -1,0 +1,32 @@
+{
+	"ClassID": 180,
+	"ClassType": "Teams",
+	"NodeId": "11",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "Teams",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

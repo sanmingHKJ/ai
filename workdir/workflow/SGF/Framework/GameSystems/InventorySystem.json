@@ -1,0 +1,34 @@
+{
+	"ClassID": 1,
+	"ClassType": "SandboxNode",
+	"NodeId": "20010",
+	"attribute": [],
+	"flags": 0,
+	"realNodeName": "InventorySystem",
+	"reflex": [
+		{
+			"Name": "InventorySystem"
+		},
+		{
+			"Tag": 0
+		},
+		{
+			"Enabled": true
+		},
+		{
+			"SyncMode": 0
+		},
+		{
+			"LocalSyncFlag": 0
+		},
+		{
+			"ResourceDynamicLoad": false
+		},
+		{
+			"IgnoreSafeMode": false
+		},
+		{
+			"ResourceLoadMode": 0
+		}
+	]
+}

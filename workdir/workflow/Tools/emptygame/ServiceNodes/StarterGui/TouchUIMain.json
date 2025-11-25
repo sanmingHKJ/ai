@@ -1,0 +1,44 @@
+{
+	"ClassID": 149,
+	"ClassType": "UIRoot",
+	"NodeId": "11041",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "TouchUIMain",
+	"reflex": [
+		{
+			"Name": "TouchUIMain" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"RenderIndex": 0 
+		},
+		{
+			"Locked": false 
+		} 
+	] 
+} 

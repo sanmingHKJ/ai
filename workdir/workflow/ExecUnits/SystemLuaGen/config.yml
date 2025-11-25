@@ -1,0 +1,63 @@
+# SystemLuaGen Configuration
+config:
+  Version: "1.0"
+  Description: "Generate lua from per-system specs and integration contracts."
+
+  # MAIN EXECUTION DOCS
+  ExecflowFile: exec-flow.md                # Orchestrator for all systems
+
+  # PIPELINE INPUTS
+  Inputs:
+    - Type: SystemsSpecData
+      Folder: specs/
+    - Type: SystemsContractsData
+      File: systems_contracts.yml
+    - Type: SystemsRegistryData
+      File: global_registry.yml
+
+  # PIPELINE OUTPUTS
+  Outputs:
+    - Type: LuaCodeData
+
+# LLM Configuration (for implement_functions.py)
+llm:
+  provider: "anthropic"  # Options: anthropic, openai
+  model: "claude-haiku-4-5-20251001" #claude-sonnet-4-5-20250929
+  api_key_env: "CLAUDE_API_KEY"
+  temperature: 0.2
+  max_tokens: 1000
+
+# Lua Configuration
+lua:
+  version: "5.1"  # MiniWorld Studio uses Lua 5.1
+  luac_path: "workflow/Tools/luac5.1.exe"  # Path to luac compiler for syntax checking
+
+# Generation Configuration
+generation:
+  retry_on_failure: true
+  max_retries: 3
+  skip_on_error: false  # Stop on first error or continue
+  parallel_llm_calls: false  # Future enhancement
+
+# Implementation Mode Configuration (Phase 3)
+implementation:
+  mode: "direct"  # Options: "direct" (use implement_functions.py), "agent" (spawn subagent)
+  # direct mode: Uses implement_functions.py with LLM API calls
+  # agent mode: Spawns a specialized subagent to handle implementation
+
+# Validation Configuration
+validation:
+  strict_mode: false  # Treat warnings as errors
+  forbidden_patterns:
+    - "os.execute"
+    - "io.open"
+    - "loadstring"
+  check_syntax: true
+  check_sgf_pattern: true
+  check_contracts: true
+
+# Output Configuration
+output:
+  create_backups: true
+  backup_suffix: ".backup"
+  overwrite_existing: true

@@ -1,0 +1,43 @@
+{
+	"ClassID": 87,
+	"ClassType": "ModuleScript",
+	"NodeId": "967746412551",
+	"attribute": [],
+	"flags": 0,
+	"realNodeName": "NetworkComponent",
+	"reflex": [
+		{
+			"Name": "NetworkComponent"
+		},
+		{
+			"Tag": 0
+		},
+		{
+			"Enabled": true
+		},
+		{
+			"SyncMode": 0
+		},
+		{
+			"LocalSyncFlag": 0
+		},
+		{
+			"ResourceDynamicLoad": false
+		},
+		{
+			"IgnoreSafeMode": false
+		},
+		{
+			"ResourceLoadMode": 0
+		},
+		{
+			"Scriptid": 0
+		},
+		{
+			"Mode": 1
+		},
+		{
+			"Luafile": ""
+		}
+	]
+}

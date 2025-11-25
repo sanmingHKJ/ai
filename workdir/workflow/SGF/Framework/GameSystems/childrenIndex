@@ -1,0 +1,11 @@
+20000;CombatSystem
+20003;EnemySpawnSystem
+20005;EquipmentSystem
+20009;InventorySystem
+20013;LevelSystem
+20016;NPCInteractionSystem
+20018;PlayerSystem
+20022;QuestSystem
+20024;SceneSystem
+20026;ShopSystem
+20028;SkillSystem

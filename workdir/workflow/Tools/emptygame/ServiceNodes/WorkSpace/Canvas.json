@@ -1,0 +1,62 @@
+{
+	"ClassID": 591,
+	"ClassType": "Canvas",
+	"NodeId": "15875",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "Canvas",
+	"reflex": [
+		{
+			"Name": "Canvas" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"LocalPosition": [
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalScale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"LocalRotation": 0 
+		},
+		{
+			"Visible": false 
+		},
+		{
+			"Order": 0 
+		},
+		{
+			"TextureId": "sandboxSysId:\/\/ui\/white.png" 
+		},
+		{
+			"ShowGridLine": true 
+		} 
+	] 
+} 

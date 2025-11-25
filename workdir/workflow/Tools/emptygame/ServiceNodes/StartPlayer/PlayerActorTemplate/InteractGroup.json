@@ -1,0 +1,38 @@
+{
+	"ClassID": 562,
+	"ClassType": "CommonBehaviorGroup",
+	"NodeId": "11027",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "InteractGroup",
+	"reflex": [
+		{
+			"Name": "InteractGroup" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"GroupID": 3 
+		} 
+	] 
+} 

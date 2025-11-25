@@ -1,0 +1,35 @@
+{
+	"ClassID": 185,
+	"ClassType": "RemoteEvent",
+	"NodeId": "9677225",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "RemoteActorEvent",
+	"reflex": [
+		{
+			"Name": "RemoteActorEvent" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

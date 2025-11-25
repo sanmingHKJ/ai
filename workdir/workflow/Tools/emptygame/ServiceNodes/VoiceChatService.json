@@ -1,0 +1,35 @@
+{
+	"ClassID": 539,
+	"ClassType": "VoiceChatService",
+	"NodeId": "55",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "VoiceChatService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"ChannelType": 0 
+		} 
+	] 
+} 

@@ -1,0 +1,102 @@
+{
+	"ClassID": 528,
+	"ClassType": "SkyDome",
+	"NodeId": "11075",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "SkyDome",
+	"reflex": [
+		{
+			"Name": "SkyDome" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"HazeColor": [
+				40,
+				122,
+				255,
+				255 
+			] 
+		},
+		{
+			"HorizonColor": [
+				164,
+				211,
+				255,
+				255 
+			] 
+		},
+		{
+			"ZenithColor": [
+				177,
+				226,
+				255,
+				255 
+			] 
+		},
+		{
+			"SkyBoxType": 0 
+		},
+		{
+			"CloudsEnable": true 
+		},
+		{
+			"ShadowColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"ShadowDarkColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"CloudsCoverage": 0.04199999943375587 
+		},
+		{
+			"LightIntensity": 0.1000000014901161 
+		},
+		{
+			"CloudsSpeed": 0.1000000014901161 
+		},
+		{
+			"CloudsAlpha": 0.4099999964237213 
+		},
+		{
+			"StarsAmount": 0.5 
+		},
+		{
+			"CubeAssetID": "" 
+		},
+		{
+			"AdvanceMaterialAssetID": "sandboxSysId&filetype=8&restype=6:\/\/Materials\/Studio\/AdvancedSkybox.mat" 
+		} 
+	] 
+} 

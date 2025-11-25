@@ -1,0 +1,32 @@
+{
+	"ClassID": 92,
+	"ClassType": "ServerStorage",
+	"NodeId": "29",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "ServerStorage",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 1 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

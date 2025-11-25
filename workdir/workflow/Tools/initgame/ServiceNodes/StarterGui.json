@@ -1,0 +1,82 @@
+{
+	"ClassID": 200,
+	"ClassType": "StarterGui",
+	"NodeId": "45",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "StarterGui",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"WalkZone": 1 
+		},
+		{
+			"InactiveAlpha": 1 
+		},
+		{
+			"ChatFrameVisible": true 
+		},
+		{
+			"ChatFramePosition": [
+				955,
+				132 
+			] 
+		},
+		{
+			"ChatFrameScale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"RunExtension": 1.5 
+		},
+		{
+			"RockerZoneVisible": false 
+		},
+		{
+			"RockerZoneGap": [
+				0,
+				0,
+				640,
+				0 
+			] 
+		},
+		{
+			"RockerFixed": false 
+		},
+		{
+			"RockerFixPosition": [
+				120,
+				600 
+			] 
+		},
+		{
+			"VersionCache": false 
+		},
+		{
+			"OnlyInitSync": false 
+		} 
+	] 
+} 

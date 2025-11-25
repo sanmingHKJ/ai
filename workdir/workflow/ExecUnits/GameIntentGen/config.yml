@@ -1,0 +1,8 @@
+config:
+  Description: generate game design intent from high-level prompts.
+  ExecflowFile: exec-flow.md
+  Inputs:
+    - Type: UserPrompt
+  Outputs:
+    - Type: GameIntentData
+      File: game_intent.md

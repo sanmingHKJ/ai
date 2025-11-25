@@ -1,0 +1,37 @@
+# Purpose: Provide a simple structural plan of systems for SystemSpecGen.
+# The LLM generates only these fields. Everything else is expanded later.
+
+systems_plan:
+  systems:
+    - id: string
+      # Unique system id, e.g. "HeroSystem"
+
+      role: string
+      # High-level category of the system
+      # Suggested values:
+      #   "character", "combat", "economy", "progression", "movement", "inventory", "matchflow", "meta"
+      # (But free-form allowed)
+
+      responsibilities:
+        - string
+      # One-line descriptions of what this system owns.
+      # Examples:
+      #   - "Manages hero stats and leveling"
+      #   - "Resolves all damage and death"
+      #   - "Tracks gold income and spending"
+
+      dependencies:
+        - string
+      # System ids this system needs to call or consume from.
+      # Example: ["XPSystem", "CombatSystem", "EconomySystem"]
+      # Can be empty.
+
+      priority: string
+      # Importance of the system within the game.
+      # Suggested values:
+      #   "core", "important", "optional"
+      # Required.
+
+      notes: string
+      # Optional free-form notes
+      # Used for constraints, special rules, or AI hints.

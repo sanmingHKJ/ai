@@ -1,0 +1,9 @@
+config:
+  Description: Generate game systems which comprise the game, based on the game intent.
+  ExecflowFile: exec-flow.md
+  Inputs:
+    - Type: GameIntentData
+      File: game_intent.md
+  Outputs:
+    - Type: SystemsPlanData
+      File: systems_plan.md

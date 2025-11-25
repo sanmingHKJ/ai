@@ -1,0 +1,35 @@
+{
+	"ClassID": 108,
+	"ClassType": "StarterCharacterScripts",
+	"NodeId": "16",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "StarterCharacterScripts",
+	"reflex": [
+		{
+			"Name": "StarterCharacterScripts" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

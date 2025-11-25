@@ -1,0 +1,62 @@
+{
+	"ClassID": 212,
+	"ClassType": "Animator",
+	"NodeId": "11040",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "Animator",
+	"reflex": [
+		{
+			"Name": "Animator" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"IsReplication": true 
+		},
+		{
+			"pause": false 
+		},
+		{
+			"Pause": false 
+		},
+		{
+			"SkeletonAsset": "" 
+		},
+		{
+			"ControllerAsset": "sandboxSysId&restype=12:\/\/ministudio\/entity\/player\/player12\/Animation\/OfficialController.controller" 
+		},
+		{
+			"Speed": 1 
+		},
+		{
+			"CullingMode": 0 
+		},
+		{
+			"FixedTickTime": 0 
+		},
+		{
+			"ModelWaitForLoaded": false 
+		} 
+	] 
+} 

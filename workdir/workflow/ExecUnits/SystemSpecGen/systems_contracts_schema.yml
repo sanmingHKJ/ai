@@ -1,0 +1,51 @@
+# Schema for systems_contracts.yml (final output from Phase 3)
+# Cross-system integration contracts and dependency analysis
+
+systems_contracts:
+  # Metadata about the contracts file
+  metadata:
+    version: string              # Schema version (e.g., "1.1")
+    generated_from: string       # Source directory (e.g., "specs/")
+
+  # Integration topology graph showing each system's connections
+  integration_graph:
+    - id: string                                    # SystemId
+      depends_on: [string]                          # List of SystemIds this system depends on
+      inbound_events: [string]                      # Event IDs this system subscribes to
+      outbound_events: [string]                     # Event IDs this system emits
+      queries_used: [string]                        # Query IDs this system calls (format: "SystemId.method_name")
+      commands_used: [string]                       # Command IDs this system calls (format: "SystemId.method_name")
+
+  # Event contracts: producers and consumers for each event
+  event_contracts:
+    - event_id: string                              # Event ID in SCREAMING_SNAKE_CASE
+      producer: string                              # SystemId that emits this event
+      consumers:
+        - system: string                            # SystemId that subscribes
+          handler: string                           # Behavior ID or handler name
+      payload_schema:                               # Event payload structure
+        field_name:
+          type: string                              # Field type (e.g., "EntityId", "int", "string")
+          required: boolean                         # Whether field is required
+
+  # Query contracts: providers and consumers for each query
+  query_contracts:
+    - query_id: string                              # Query ID in format "SystemId.method_name"
+      provider: string                              # SystemId that implements this query
+      consumers: [string]                           # List of SystemIds that call this query
+      signature: string                             # Full signature (e.g., "(hero_id: HeroInstanceId) -> int")
+
+  # Command contracts: providers and consumers for each command
+  command_contracts:
+    - command_id: string                            # Command ID in format "SystemId.method_name"
+      provider: string                              # SystemId that implements this command
+      consumers: [string]                           # List of SystemIds that call this command
+      signature: string                             # Full signature (e.g., "(player_id: PlayerId, amount: int) -> bool")
+
+  # Validation warnings and issues detected during contract generation
+  warnings:
+    orphan_events: [string]                         # Event IDs with no subscribers
+    unused_queries: [string]                        # Query IDs never called by any system
+    unused_commands: [string]                       # Command IDs never called by any system
+    dependency_cycles: [string]                     # Lists of SystemIds forming circular dependencies
+    high_coupling_systems: [string]                 # SystemIds with >10 connections (potential "god systems")

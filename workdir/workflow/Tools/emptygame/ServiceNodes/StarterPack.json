@@ -1,0 +1,32 @@
+{
+	"ClassID": 178,
+	"ClassType": "StarterPack",
+	"NodeId": "8",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "StarterPack",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

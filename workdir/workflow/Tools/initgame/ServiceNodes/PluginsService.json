@@ -1,0 +1,32 @@
+{
+	"ClassID": 28000,
+	"ClassType": "PluginsService",
+	"NodeId": "74",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "PluginsService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 1 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

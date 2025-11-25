@@ -1,0 +1,460 @@
+--[[
+    BasePanel.lua - 面板基类
+    提供UI面板的标准实现基类和通用功能
+    Version: 1.0.0
+]]
+
+local BasePanel = {
+    name = "BasePanel",
+    systemName = "",
+    panelType = "overlay", -- "background" | "normal" | "overlay" | "popup" | "modal" | "fullscreen"
+
+    isStaticUI = false,    -- 是否为静态UI
+
+    -- 框架和系统引用
+    sgf = nil,
+    system = nil,
+
+    -- UI根节点
+    uiRoot = nil,
+
+    -- 数据模型
+    dataModel = nil,
+
+    -- 面板状态
+    isVisible = false,
+    isInitialized = false,
+
+    -- 事件连接
+    connections = {},
+
+    -- 动画状态
+    isAnimating = false,
+
+    -- 配置
+    config = {},
+}
+
+-- 初始化面板
+function BasePanel:init(sgf, system)
+    if self.isInitialized then
+        return true
+    end
+
+    self.sgf = sgf
+    self.system = system
+    self.connections = {}
+    self.config = {}
+
+    -- 创建UI根节点（仅对动态UI）
+    if not self:IsStaticUI() then
+        self:createUIRoot()
+    end
+
+    -- 创建UI元素（静态UI在此方法中设置self.uiRoot）
+    if self.createUIElements then
+        self:createUIElements()
+    end
+
+    -- 初始隐藏UI（在uiRoot设置之后）
+    if self.uiRoot then
+        self.uiRoot.Visible = false
+    end
+
+    -- 绑定事件
+    if self.bindEvents then
+        self:bindEvents()
+    end
+
+    -- 初始化数据
+    if self.initializeData then
+        self:initializeData()
+    end
+
+    self.isInitialized = true
+
+    if self.sgf and self.sgf.log then
+        self.sgf.log:debug("Panel initialized", {
+            name = self.name,
+            isStaticUI = self:IsStaticUI()
+        })
+    end
+
+    return true
+end
+
+-- 检查是否为静态UI节点
+function BasePanel:IsStaticUI()
+    if self.isStaticUI == nil then
+        return false
+    else
+        return self.isStaticUI
+    end
+end
+
+-- 创建UI根节点
+function BasePanel:createUIRoot()
+    self.uiRoot = SandboxNode.new("UIRoot")
+    self.uiRoot.Name = self.name .. "Panel"
+
+    -- 设置显示层级
+    local layer = self:getDisplayLayer()
+    self.uiRoot.RenderIndex = layer
+
+    -- 初始隐藏
+    self.uiRoot.Visible = false
+
+    -- 添加到PlayerGui
+    local Players = game:GetService("Players")
+    local player = Players.LocalPlayer
+    if player and player.PlayerGui then
+        self.uiRoot.Parent = player.PlayerGui
+    end
+end
+
+-- 获取显示层级
+function BasePanel:getDisplayLayer()
+    local layers = {
+        background = 0,
+        normal = 100,
+        overlay = 200,
+        popup = 300,
+        modal = 400,
+        fullscreen = 500
+    }
+
+    return layers[self.panelType] or layers.normal
+end
+
+-- 显示面板
+function BasePanel:show(data)
+    if self.isVisible or self.isAnimating then
+        return true
+    end
+
+    -- 保存传入的数据
+    if data then
+        self.showData = data
+    end
+
+    -- 刷新数据
+    if self.refreshData then
+        self:refreshData()
+    end
+
+    -- 显示前回调
+    if self.onBeforeShow then
+        self:onBeforeShow(data)
+    end
+
+    -- 显示UI
+    self.uiRoot.Visible = true
+    self.isVisible = true
+
+    -- 播放显示动画
+    if self.playShowAnimation then
+        self.isAnimating = true
+        self:playShowAnimation(function()
+            self.isAnimating = false
+            if self.onAfterShow then
+                self:onAfterShow(data)
+            end
+        end)
+    else
+        if self.onAfterShow then
+            self:onAfterShow(data)
+        end
+    end
+
+    return true
+end
+
+-- 隐藏面板
+function BasePanel:hide()
+    if not self.isVisible or self.isAnimating then
+        return true
+    end
+
+    -- 隐藏前回调
+    if self.onBeforeHide then
+        self:onBeforeHide()
+    end
+
+    -- 播放隐藏动画
+    if self.playHideAnimation then
+        self.isAnimating = true
+        self:playHideAnimation(function()
+            self.uiRoot.Visible = false
+            self.isVisible = false
+            self.isAnimating = false
+            if self.onAfterHide then
+                self:onAfterHide()
+            end
+        end)
+    else
+        self.uiRoot.Visible = false
+        self.isVisible = false
+        if self.onAfterHide then
+            self:onAfterHide()
+        end
+    end
+
+    return true
+end
+
+-- 销毁面板
+function BasePanel:destroy()
+    -- 隐藏面板
+    if self.isVisible then
+        self:hide()
+    end
+
+    -- 销毁前回调
+    if self.onBeforeDestroy then
+        self:onBeforeDestroy()
+    end
+
+    -- 断开所有事件连接
+    self:disconnectAllEvents()
+
+    -- 销毁UI
+    if self.uiRoot then
+        self.uiRoot:Destroy()
+        self.uiRoot = nil
+    end
+
+    -- 清理引用
+    self.sgf = nil
+    self.system = nil
+    self.dataModel = nil
+    self.showData = nil
+
+    self.isInitialized = false
+
+    return true
+end
+
+-- 绑定数据模型
+function BasePanel:bindData(dataModel)
+    self.dataModel = dataModel
+
+    -- 刷新显示
+    if self.refreshData then
+        self:refreshData()
+    end
+end
+
+-- 刷新数据显示
+function BasePanel:refreshData()
+    if not self.dataModel then
+        return
+    end
+
+    -- 子类应该重写此方法来更新UI显示
+    if self.updateUIFromData then
+        self:updateUIFromData(self.dataModel:getData())
+    end
+end
+
+-- 处理UI事件
+function BasePanel:onUIEvent(eventType, data)
+    -- 子类应该重写此方法来处理具体的UI事件
+    if self.sgf and self.sgf.log then
+        self.sgf.log:debug("UI event received", {
+            panel = self.name,
+            eventType = eventType,
+            data = data
+        })
+    end
+end
+
+-- 发送系统事件
+function BasePanel:sendSystemEvent(eventType, data)
+    if self.system and self.system.handlePanelEvent then
+        self.system:handlePanelEvent(eventType, data)
+    elseif self.sgf and self.sgf.events then
+        self.sgf.events:emit("PanelEvent", {
+            panel = self.name,
+            system = self.systemName,
+            eventType = eventType,
+            data = data
+        })
+    end
+end
+
+-- 连接事件
+function BasePanel:connectEvent(object, eventName, callback)
+    if not object or not object[eventName] then
+        return nil
+    end
+
+    local connection = object[eventName]:Connect(callback)
+    table.insert(self.connections, connection)
+
+    return connection
+end
+
+-- 断开所有事件连接
+function BasePanel:disconnectAllEvents()
+    for _, connection in ipairs(self.connections) do
+        if connection and connection.Connected then
+            connection:Disconnect()
+        end
+    end
+    self.connections = {}
+end
+
+-- 创建UI元素辅助方法
+function BasePanel:createElement(className, properties, parent)
+    local element = SandboxNode.new(className)
+
+    -- 设置属性
+    if properties then
+        for property, value in pairs(properties) do
+            element[property] = value
+        end
+    end
+
+    -- 设置父级
+    if parent then
+        element.Parent = parent
+    end
+
+    return element
+end
+
+-- 创建按钮
+function BasePanel:createButton(properties, parent, onClick)
+    local button = self:createElement("UIButton", properties, parent)
+
+    if onClick then
+        self:connectEvent(button, "Click", onClick)
+    end
+
+    return button
+end
+
+-- 创建文本标签
+function BasePanel:createLabel(properties, parent)
+    return self:createElement("UITextLabel", properties, parent)
+end
+
+-- 创建UI列表
+function BasePanel:createUIList(properties, parent)
+    return self:createElement("UIList", properties, parent)
+end
+
+-- 创建UIPanel
+function BasePanel:createUIPanel(properties, parent)
+    return self:createElement("UIPanel", properties, parent)
+end
+
+-- 创建UIImage
+function BasePanel:createUIImage(properties, parent)
+    return self:createElement("UIImage", properties, parent)
+end
+
+-- 设置UI元素可见性
+function BasePanel:setElementVisible(element, visible)
+    if element then
+        element.Visible = visible
+    end
+end
+
+-- 设置UI元素文本
+function BasePanel:setElementText(element, text)
+    if element and element.Title ~= nil then
+        element.Title = tostring(text)
+    end
+end
+
+-- 获取UI元素文本
+function BasePanel:getElementText(element)
+    if element and element.Title ~= nil then
+        return element.Title
+    end
+    return ""
+end
+
+-- 播放简单的淡入动画
+function BasePanel:playFadeInAnimation(element, duration, callback)
+    if not element or not element.Alpha then
+        if callback then callback() end
+        return
+    end
+
+    duration = duration or 0.3
+    element.BackgroundTransparency = 1
+
+    local TweenService = game:GetService("TweenService")
+    local tween = TweenService:Create(
+        element,
+        TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+        { Alpha = 1 }
+    )
+
+    if callback then
+        tween.Completed:Connect(callback)
+    end
+
+    tween:Play()
+end
+
+-- 获取面板配置
+function BasePanel:getConfig(key, defaultValue)
+    if self.config and self.config[key] ~= nil then
+        return self.config[key]
+    end
+    return defaultValue
+end
+
+-- 设置面板配置
+function BasePanel:setConfig(key, value)
+    if not self.config then
+        self.config = {}
+    end
+    self.config[key] = value
+end
+
+--获取视口分辨率
+function BasePanel:GetViewportSize()
+    local resolution = game:GetService("WorldService"):GetUISize()
+    return resolution
+end
+
+--[[
+    根据布局关系设置UI元素的位置
+    @param element (UIElement) UI元素
+    @param layoutType (string|nil) 布局类型 ("horizontal", "vertical", nil表示全设置)
+]]
+function BasePanel:ApplyLayoutPositioning(element, layoutType)
+    local viewportSize
+    if element.Parent and element.Parent.ClassType ~= "UIRoot" then
+        viewportSize = element.Parent.Size
+    else
+        viewportSize = self:GetViewportSize()
+    end
+    local newPosX, newPosY = element.Position.X, element.Position.Y
+    if layoutType == nil or layoutType == "horizontal" then
+        if element.LayoutHRelation == Enum.LayoutHRelation.Middle then
+            newPosX = viewportSize.X / 2
+        elseif element.LayoutHRelation == Enum.LayoutHRelation.Left then
+            newPosX = 0
+        elseif element.LayoutHRelation == Enum.LayoutHRelation.Right then
+            newPosX = viewportSize.X
+        end
+    end
+    if layoutType == nil or layoutType == "vertical" then
+        if element.LayoutVRelation == Enum.LayoutVRelation.Middle then
+            newPosY = viewportSize.Y / 2
+        elseif element.LayoutVRelation == Enum.LayoutVRelation.Top then
+            newPosY = 0
+        elseif element.LayoutVRelation == Enum.LayoutVRelation.Bottom then
+            newPosY = viewportSize.Y
+        end
+    end
+
+    element.Position = Vector2.new(newPosX, newPosY)
+end
+
+return BasePanel

@@ -1,0 +1,41 @@
+{
+	"ClassID": 549,
+	"ClassType": "LegacyAnimation",
+	"NodeId": "11039",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "LegacyAnimation",
+	"reflex": [
+		{
+			"Name": "LegacyAnimation" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"IsReplication": true 
+		},
+		{
+			"EnablePlayEvent": false 
+		} 
+	] 
+} 

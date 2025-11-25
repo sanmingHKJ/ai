@@ -1,0 +1,23 @@
+config:
+  Version: "1.0"
+  Description: "Generate per-system specs and integration contracts from game intent and systems plan."
+
+  # MAIN EXECUTION DOCS
+  ExecflowFile: exec-flow.md                # Orchestrator for all systems
+  PerSystemFile: single-system-spec-gen.md  # Per-system spec generator
+
+  # PIPELINE INPUTS
+  Inputs:
+    - Type: GameIntentData
+      File: game_intent.md
+    - Type: SystemsPlanData
+      File: systems_plan.yml
+
+  # PIPELINE OUTPUTS
+  Outputs:
+    - Type: SystemsSpecData
+      Folder: specs/
+    - Type: SystemsContractsData
+      File: systems_contracts.yml
+    - Type: SystemsRegistryData
+      File: global_registry.yml

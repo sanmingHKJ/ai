@@ -1,0 +1,35 @@
+{
+	"ClassID": 564,
+	"ClassType": "AvatarGroupPart",
+	"NodeId": "11011",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "AvatarPartGroup",
+	"reflex": [
+		{
+			"Name": "AvatarPartGroup" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

@@ -1,0 +1,57 @@
+{
+	"ClassID": 175,
+	"ClassType": "SoundService",
+	"NodeId": "25",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "SoundService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"ListenerType": 0 
+		},
+		{
+			"ListenerObject": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		},
+		{
+			"RolloffScale": 1 
+		},
+		{
+			"DistanceFactor": 1 
+		},
+		{
+			"DopplerScale": 1 
+		},
+		{
+			"GlobalVolume": 80 
+		},
+		{
+			"MusicOpen": false 
+		} 
+	] 
+} 

@@ -1,0 +1,61 @@
+# Root of systems spec file
+systems_spec:
+  # Optional high-level metadata
+  metadata:
+    version: string              # e.g. "1.0"
+    game_name: string            # optional
+    notes: string                # optional free text
+
+  # List of system specifications
+  systems:
+    - id: string
+      role: string               # "character", "combat", "economy", etc.
+
+      data:
+        entities:
+          - name: string
+            fields:
+              field_name: type_string
+
+      interface:
+        player_actions:
+          - id: string
+            input: { field: type }
+            effect_summary: string   # 1–2 sentences only
+
+        queries:
+          - id: string
+            returns: string
+            args: { field: type }
+            summary: string
+
+        commands:
+          - id: string
+            args: { field: type }
+            summary: string
+
+      events:
+        emits:
+          - id: string
+            payload: { field: type }
+
+        subscribes:
+          - event: string
+            from: string
+            summary: string
+
+      behaviors:
+        - id: string
+          trigger:
+            type: '"action" | "event" | "timer" | "init"'
+            name: string              # ACTION_* for action, EVENT_* for event, timer name for timer, omit for init
+            every: number             # optional, only for timer type (seconds)
+          summary: string
+          steps:
+            - op: '"query" | "command" | "emit" | "if_true" | "if_false"'
+              system: string
+              name: string
+              args: { key: value }
+              assign_to: optional_string
+              cond: optional_string   # for if_true/if_false
+              then: optional_steps    # for if_true/if_false

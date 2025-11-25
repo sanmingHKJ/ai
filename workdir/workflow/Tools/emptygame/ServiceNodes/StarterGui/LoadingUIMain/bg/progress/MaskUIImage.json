@@ -1,0 +1,171 @@
+{
+	"ClassID": 145,
+	"ClassType": "UIImage",
+	"NodeId": "13129",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "MaskUIImage",
+	"reflex": [
+		{
+			"Name": "MaskUIImage" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"RenderIndex": 0 
+		},
+		{
+			"Locked": true 
+		},
+		{
+			"Size": [
+				0,
+				20 
+			] 
+		},
+		{
+			"Scale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"Rotation": 0 
+		},
+		{
+			"Pivot": [
+				0,
+				0 
+			] 
+		},
+		{
+			"IsKeepPosWhenPivotChange": false 
+		},
+		{
+			"IsNotifyEventStop": true 
+		},
+		{
+			"LineColor": [
+				0,
+				0,
+				0,
+				255 
+			] 
+		},
+		{
+			"FillColor": [
+				44,
+				118,
+				255,
+				255 
+			] 
+		},
+		{
+			"LineSize": 2 
+		},
+		{
+			"ClickPass": false 
+		},
+		{
+			"LayoutHRelation": 0 
+		},
+		{
+			"LayoutVRelation": 0 
+		},
+		{
+			"LayoutSizeRelation": 0 
+		},
+		{
+			"HRelationLength": 0 
+		},
+		{
+			"VRelationLength": 0 
+		},
+		{
+			"WidthRelationLength": 10000000 
+		},
+		{
+			"HeightRelationLength": 10000000 
+		},
+		{
+			"Active": false 
+		},
+		{
+			"Grayed": false 
+		},
+		{
+			"Icon": "" 
+		},
+		{
+			"FillMethod": 0 
+		},
+		{
+			"FillOrigin": 0 
+		},
+		{
+			"FillClockwise": false 
+		},
+		{
+			"FillAmount": 1 
+		},
+		{
+			"IsAutoSize": false 
+		},
+		{
+			"Alpha": 1 
+		},
+		{
+			"ScaleType": 1 
+		},
+		{
+			"Scale9Grid": [
+				2,
+				2,
+				2,
+				2 
+			] 
+		},
+		{
+			"AutoTranslator": false 
+		},
+		{
+			"MaskUI": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		},
+		{
+			"BlurFilter": false 
+		},
+		{
+			"BlurSigma": 3 
+		},
+		{
+			"UIMaskMode": true 
+		} 
+	] 
+} 

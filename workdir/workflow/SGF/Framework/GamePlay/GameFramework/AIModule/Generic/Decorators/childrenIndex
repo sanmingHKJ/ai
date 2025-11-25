@@ -1,0 +1,15 @@
+967732220;InRangeToLocation
+9675461157322;IsCasting
+9677977324;CheckActorId
+9677275322;IsSet
+967557322;IsBehavior
+9677345321;HasStatValue
+9678345321;HasBuff
+9678877325;CanAttack
+9677322;TargetState
+9677319;InRangeToTarget
+9677320;InRangeHealth
+9677321;InAngleToTarget
+9677323;Cooldown
+9677324;CheckProjectile
+9677325;Chance

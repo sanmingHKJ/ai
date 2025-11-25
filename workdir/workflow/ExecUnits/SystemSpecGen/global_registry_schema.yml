@@ -1,0 +1,18 @@
+# Schema for global_registry.yml (intermediate output from Phase 2B)
+# This registry aggregates all event/query/command IDs across all systems
+
+global_registry:
+  # All events emitted by any system in the game
+  events:
+    - id: string              # Event ID in SCREAMING_SNAKE_CASE (e.g., "HERO_DAMAGED")
+      producer: string        # SystemId that emits this event
+
+  # All queries provided by any system
+  queries:
+    - id: string              # Query ID in format "SystemId.method_name" (e.g., "CombatSystem.get_damage_multiplier")
+      signature: string       # Full signature with args and return type (e.g., "(attacker_id: EntityId) -> float")
+
+  # All commands provided by any system
+  commands:
+    - id: string              # Command ID in format "SystemId.method_name" (e.g., "GoldSystem.spend")
+      signature: string       # Full signature with args and return type (e.g., "(player_id: PlayerId, amount: int) -> bool")

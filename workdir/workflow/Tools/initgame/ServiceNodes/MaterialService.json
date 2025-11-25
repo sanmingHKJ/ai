@@ -1,0 +1,35 @@
+{
+	"ClassID": 157,
+	"ClassType": "MaterialService",
+	"NodeId": "49",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "MaterialService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"TemplateIndex": 2000 
+		} 
+	] 
+} 

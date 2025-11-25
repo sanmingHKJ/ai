@@ -1,0 +1,53 @@
+{
+	"ClassID": 563,
+	"ClassType": "AvatarPart",
+	"NodeId": "11021",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "FOOTPRINT",
+	"reflex": [
+		{
+			"Name": "FOOTPRINT" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"PartType": 9 
+		},
+		{
+			"ModelResId": "" 
+		},
+		{
+			"DiffuseTexResId": "" 
+		},
+		{
+			"EmissiveTexResId": "" 
+		},
+		{
+			"Show": true 
+		},
+		{
+			"ModelId": -1 
+		} 
+	] 
+} 

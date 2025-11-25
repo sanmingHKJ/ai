@@ -1,0 +1,53 @@
+{
+	"ClassID": 563,
+	"ClassType": "AvatarPart",
+	"NodeId": "11023",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "RIGHT_HAND",
+	"reflex": [
+		{
+			"Name": "RIGHT_HAND" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"PartType": 11 
+		},
+		{
+			"ModelResId": "" 
+		},
+		{
+			"DiffuseTexResId": "" 
+		},
+		{
+			"EmissiveTexResId": "" 
+		},
+		{
+			"Show": true 
+		},
+		{
+			"ModelId": -1 
+		} 
+	] 
+} 

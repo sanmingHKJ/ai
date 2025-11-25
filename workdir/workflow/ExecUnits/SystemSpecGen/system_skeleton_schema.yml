@@ -1,0 +1,62 @@
+# Minimal skeleton schema for a single system specification
+# This schema defines the EXACT format expected by build_global_registry.py
+
+system_spec:
+  id: "SystemName"            # REQUIRED: Unique system identifier (PascalCase)
+  role: "role_name"           # REQUIRED: System role: "character", "combat", "economy", "progression", "inventory", "infrastructure", "presentation", "matchflow"
+
+  data:
+    entities:                 # REQUIRED: List of entity names (no fields in skeleton mode)
+      - name: "EntityName"    # Just the name string, PascalCase
+
+  interface:
+    player_actions:           # OPTIONAL: Actions players can trigger
+      - id: "ACTION_NAME"     # SCREAMING_SNAKE_CASE, must start with ACTION_
+        input: { param_name: "type_string" }  # REQUIRED: Inline dict format { param: "type" }
+
+    queries:                  # OPTIONAL: Read-only queries from other systems
+      - id: "query_name"      # snake_case or GET_/HAS_/IS_/CAN_ prefix
+        returns: "type_string"  # REQUIRED: Return type as string
+        args: { param_name: "type_string" }  # REQUIRED: Inline dict format { param: "type" }, use {} for no args
+
+    commands:                 # OPTIONAL: Write operations from other systems
+      - id: "COMMAND_NAME"    # SCREAMING_SNAKE_CASE or snake_case
+        args: { param_name: "type_string" }  # REQUIRED: Inline dict format { param: "type" }, use {} for no args
+
+  events:
+    emits:                    # OPTIONAL: Events this system publishes
+      - id: "EVENT_NAME"      # SCREAMING_SNAKE_CASE, just the ID string (or can be string directly)
+
+    subscribes:               # OPTIONAL: Events this system listens to
+      - from: "SystemName"    # REQUIRED: Producer system name
+        event: "EVENT_NAME"   # REQUIRED: Event ID (SCREAMING_SNAKE_CASE)
+
+  behaviors: []               # REQUIRED: Empty array in skeleton mode
+
+# IMPORTANT TYPE CONVENTIONS:
+# Common types: "int", "float", "string", "bool", "vec2", "vec3"
+# ID types: "EntityId", "PlayerId", "HeroId", "EnemyId", "ItemId", "QuestId", "LevelId", "CheckpointId"
+# Collections: "list<T>", "dict<K,V>"
+# Custom: Any PascalCase entity name defined in data.entities
+
+# EXAMPLE:
+# queries:
+#   - id: "get_hero_health"
+#     returns: "int"
+#     args: { hero_id: "HeroId" }
+#
+# commands:
+#   - id: "APPLY_DAMAGE"
+#     args: { target_id: "EntityId", amount: "int", source: "string" }
+#
+# player_actions:
+#   - id: "ACTION_ATTACK"
+#     input: { target_id: "EntityId", attack_type: "string" }
+#
+# events:
+#   emits:
+#     - id: "HERO_DAMAGED"
+#     - id: "HERO_DIED"
+#   subscribes:
+#     - from: "CombatSystem"
+#       event: "DAMAGE_DEALT"

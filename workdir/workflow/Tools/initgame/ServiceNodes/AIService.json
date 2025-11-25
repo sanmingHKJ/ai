@@ -1,0 +1,32 @@
+{
+	"ClassID": 607,
+	"ClassType": "AIService",
+	"NodeId": "83",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "AIService",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 1 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		} 
+	] 
+} 

@@ -1,0 +1,35 @@
+{
+	"ClassID": 86,
+	"ClassType": "MainStorage",
+	"NodeId": "31",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "MainStorage",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 2 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"VersionCache": false 
+		} 
+	] 
+} 

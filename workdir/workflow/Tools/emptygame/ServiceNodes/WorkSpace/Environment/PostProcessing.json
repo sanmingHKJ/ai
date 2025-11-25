@@ -1,0 +1,410 @@
+{
+	"ClassID": 530,
+	"ClassType": "PostProcessing",
+	"NodeId": "11077",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "PostProcessing",
+	"reflex": [
+		{
+			"Name": "PostProcessing" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"BloomActive": false 
+		},
+		{
+			"BloomIntensity": 2 
+		},
+		{
+			"BloomThreshold": -1 
+		},
+		{
+			"DofActive": false 
+		},
+		{
+			"DofFocalRegion": 0 
+		},
+		{
+			"DofNearTransitionRegion": 300 
+		},
+		{
+			"DofFarTransitionRegion": 500 
+		},
+		{
+			"DofFocalDistance": 100 
+		},
+		{
+			"DofScale": 1 
+		},
+		{
+			"AntialiasingEnable": true 
+		},
+		{
+			"AntialiasingMethod": 0 
+		},
+		{
+			"AntialiasingQuality": 2 
+		},
+		{
+			"LUTsActive": false 
+		},
+		{
+			"LUTsTemperatureType": 0 
+		},
+		{
+			"LUTsWhiteTemp": 6450 
+		},
+		{
+			"LUTsWhiteTint": 0 
+		},
+		{
+			"LUTsColorCorrectionShadowsMax": 0.800000011920929 
+		},
+		{
+			"LUTsColorCorrectionHighlightsMin": 0.5 
+		},
+		{
+			"LUTsBlueCorrection": 0.6000000238418579 
+		},
+		{
+			"LUTsExpandGamut": 1 
+		},
+		{
+			"LUTsToneCurveAmout": 1 
+		},
+		{
+			"LUTsFilmicToneMapSlope": 0.8799999952316284 
+		},
+		{
+			"LUTsFilmicToneMapToe": 0.550000011920929 
+		},
+		{
+			"LUTsFilmicToneMapShoulder": 0.2599999904632568 
+		},
+		{
+			"LUTsFilmicToneMapBlackClip": 0 
+		},
+		{
+			"LUTsFilmicToneMapWhiteClip": 0.03999999910593033 
+		},
+		{
+			"LUTsBaseSaturation": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsBaseContrast": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsBaseGamma": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsBaseGain": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsBaseOffset": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LUTsShadowSaturation": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsShadowContrast": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsShadowGamma": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsShadowGain": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsShadowOffset": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LUTsMidtoneSaturation": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsMidtoneContrast": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsMidtoneGamma": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsMidtoneGain": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsMidtoneOffset": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LUTsHighlightSaturation": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsHighlightContrast": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsHighlightGamma": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsHighlightGain": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LUTsHighlightOffset": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LUTsColorGradingLUTPath": "" 
+		},
+		{
+			"GTAOActive": false 
+		},
+		{
+			"GTAOThicknessblend": 0.75 
+		},
+		{
+			"GTAOFalloffStartRatio": 0.5 
+		},
+		{
+			"GTAOFalloffEnd": 70 
+		},
+		{
+			"GTAOFadeoutDistance": 7000 
+		},
+		{
+			"GTAOFadeoutRadius": 3000 
+		},
+		{
+			"GTAOIntensity": 0.5 
+		},
+		{
+			"GTAOPower": 3.5 
+		},
+		{
+			"ChromaticAberrationActive": false 
+		},
+		{
+			"ChromaticAberrationIntensity": 1 
+		},
+		{
+			"ChromaticAberrationStartOffset": 0 
+		},
+		{
+			"ChromaticAberrationIterationStep": 0.009999999776482582 
+		},
+		{
+			"ChromaticAberrationIterationSamples": 1 
+		},
+		{
+			"VignetteActive": false 
+		},
+		{
+			"VignetteIntensity": 0 
+		},
+		{
+			"VignetteRounded": false 
+		},
+		{
+			"VignetteSmoothness": 0.2000000029802322 
+		},
+		{
+			"VignetteCenter": [
+				0.5,
+				0.5 
+			] 
+		},
+		{
+			"VignetteColor": [
+				0,
+				0,
+				0,
+				255 
+			] 
+		},
+		{
+			"VignetteMode": 0 
+		},
+		{
+			"VignetteRoundness": 1 
+		},
+		{
+			"VignetteMaskTexturePath": "" 
+		},
+		{
+			"VignetteMaskOpacity": 1 
+		},
+		{
+			"BloomLuminanceScale": 1 
+		},
+		{
+			"BloomIterator": 4 
+		},
+		{
+			"RadialFlashActive": false 
+		},
+		{
+			"RadialFlashLuminance": 0.6499999761581421 
+		},
+		{
+			"RadialFlashRadius": 0.0006000000284984708 
+		},
+		{
+			"RadialFlashContrast": 3 
+		},
+		{
+			"RadialFlashThreshold": 0.05999999865889549 
+		},
+		{
+			"RadialFlashColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"RadialFlashPivot": [
+				0.5,
+				0.5 
+			] 
+		},
+		{
+			"RadialFlashScale": [
+				27.36000061035156,
+				0.2000000029802322 
+			] 
+		},
+		{
+			"RadialFlashSpeed": [
+				0,
+				-5.5 
+			] 
+		},
+		{
+			"RadialFlashNoiseTexturePath": "" 
+		},
+		{
+			"MaterialListActive": false 
+		},
+		{
+			"MaterialList": [
+			] 
+		} 
+	] 
+} 

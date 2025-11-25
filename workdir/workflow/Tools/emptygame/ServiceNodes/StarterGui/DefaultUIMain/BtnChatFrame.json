@@ -1,0 +1,234 @@
+{
+	"ClassID": 142,
+	"ClassType": "UIButton",
+	"NodeId": "11048",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "BtnChatFrame",
+	"reflex": [
+		{
+			"Name": "BtnChatFrame" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"RenderIndex": 0 
+		},
+		{
+			"Locked": false 
+		},
+		{
+			"Size": [
+				54,
+				54 
+			] 
+		},
+		{
+			"Scale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"Rotation": 0 
+		},
+		{
+			"Pivot": [
+				0,
+				0 
+			] 
+		},
+		{
+			"IsKeepPosWhenPivotChange": false 
+		},
+		{
+			"IsNotifyEventStop": true 
+		},
+		{
+			"LineColor": [
+				0,
+				0,
+				0,
+				1 
+			] 
+		},
+		{
+			"FillColor": [
+				255,
+				255,
+				255,
+				0 
+			] 
+		},
+		{
+			"LineSize": 0 
+		},
+		{
+			"ClickPass": false 
+		},
+		{
+			"LayoutHRelation": 2 
+		},
+		{
+			"LayoutVRelation": 0 
+		},
+		{
+			"LayoutSizeRelation": 0 
+		},
+		{
+			"HRelationLength": -77 
+		},
+		{
+			"VRelationLength": 6 
+		},
+		{
+			"WidthRelationLength": 10000000 
+		},
+		{
+			"HeightRelationLength": 10000000 
+		},
+		{
+			"Active": true 
+		},
+		{
+			"Grayed": false 
+		},
+		{
+			"Icon": "sandboxSysId:\/\/ministudio\/ui\/img_icon_board.png" 
+		},
+		{
+			"Title": "" 
+		},
+		{
+			"TitleSize": 18 
+		},
+		{
+			"TitleFont": "" 
+		},
+		{
+			"AutoTranslator": false 
+		},
+		{
+			"DownEffectValue": 0.800000011920929 
+		},
+		{
+			"DownEffect": 2 
+		},
+		{
+			"Alpha": 1 
+		},
+		{
+			"OutlineEnable": false 
+		},
+		{
+			"OutlineColor": [
+				0,
+				0,
+				0,
+				255 
+			] 
+		},
+		{
+			"OutlineSize": 1 
+		},
+		{
+			"ShadowEnable": false 
+		},
+		{
+			"ShadowColor": [
+				0,
+				0,
+				0,
+				255 
+			] 
+		},
+		{
+			"ShadowOffset": [
+				0,
+				0 
+			] 
+		},
+		{
+			"IsAutoSize": true 
+		},
+		{
+			"IconColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"ScaleType": 0 
+		},
+		{
+			"Scale9Grid": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"EnableDefaultSound": true 
+		},
+		{
+			"TitleColor": [
+				61,
+				69,
+				70,
+				255 
+			] 
+		},
+		{
+			"TextVAlignment": 1 
+		},
+		{
+			"TextHAlignment": 1 
+		},
+		{
+			"TextLayoutHRelation": 1 
+		},
+		{
+			"TextLayoutVRelation": 0 
+		},
+		{
+			"Press": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		},
+		{
+			"Release": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		} 
+	] 
+} 

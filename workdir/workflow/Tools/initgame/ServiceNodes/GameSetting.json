@@ -1,0 +1,181 @@
+{
+	"ClassID": 190,
+	"ClassType": "GameSetting",
+	"NodeId": "46",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "GameSetting",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 2 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"GameStartMode": 0 
+		},
+		{
+			"CanCunIn": true 
+		},
+		{
+			"CountDown": 3 
+		},
+		{
+			"NeedPlayerCount": 1 
+		},
+		{
+			"BackgroundMusicIndex": 9 
+		},
+		{
+			"AppID": "0" 
+		},
+		{
+			"AppKey": "" 
+		},
+		{
+			"HideCursor": false 
+		},
+		{
+			"Shadow": 1 
+		},
+		{
+			"WaterReflected": 0 
+		},
+		{
+			"GamePlayMode": 0 
+		},
+		{
+			"ToolActiveMode": 1 
+		},
+		{
+			"LAYER1": 0 
+		},
+		{
+			"LAYER2": 0 
+		},
+		{
+			"LAYER3": 0 
+		},
+		{
+			"LAYER4": 0 
+		},
+		{
+			"LAYER5": 0 
+		},
+		{
+			"SyncStream": true 
+		},
+		{
+			"MusicOpen": true 
+		},
+		{
+			"ShowAssetLoading": true 
+		},
+		{
+			"SafeSyncMode": true 
+		},
+		{
+			"ViewRange": 0 
+		},
+		{
+			"UseMnSkin": false 
+		},
+		{
+			"Sensitivity": 1 
+		},
+		{
+			"AvatarPolicy": "{\"A\":[{\"K\":0,\"V\":[1,2,4,3,6,4 ] } ] } " 
+		},
+		{
+			"WithoutCharacter": false 
+		},
+		{
+			"CameraCollide": true 
+		},
+		{
+			"LoadingCustomPartTime": 0 
+		},
+		{
+			"Sceneids": [
+				0 
+			] 
+		},
+		{
+			"CameraLookFocus": [
+				[
+					0,
+					0,
+					0 
+				] 
+			] 
+		},
+		{
+			"CameraFieldOfView": [
+				75 
+			] 
+		},
+		{
+			"CameraNear": [
+				5 
+			] 
+		},
+		{
+			"CameraFar": [
+				30000 
+			] 
+		},
+		{
+			"StartScene": 0 
+		},
+		{
+			"LightActor": false 
+		},
+		{
+			"CameraOrthographicSize": [
+				3.599999904632568 
+			] 
+		},
+		{
+			"PhysicsFrames": 0 
+		},
+		{
+			"PlayerIgnoreStream": true 
+		},
+		{
+			"CreateMapVersion": 0 
+		},
+		{
+			"ComputeActorInteractions": false 
+		},
+		{
+			"AvoidInteractionsSpeedFactor": 1 
+		},
+		{
+			"OutlineColors": [
+			] 
+		},
+		{
+			"OutlineThickness": 1 
+		},
+		{
+			"DynamicBatching": true 
+		} 
+	] 
+} 

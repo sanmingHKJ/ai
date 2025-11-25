@@ -1,0 +1,152 @@
+{
+	"ClassID": 126,
+	"ClassType": "SkyLight",
+	"NodeId": "11073",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "SkyLight",
+	"reflex": [
+		{
+			"Name": "SkyLight" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Euler": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalPosition": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalEuler": [
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"LocalScale": [
+				1,
+				1,
+				1 
+			] 
+		},
+		{
+			"LocalRotation": [
+				0,
+				0,
+				0,
+				1 
+			] 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"CubeBorderEnable": false 
+		},
+		{
+			"CubeBorderColor": [
+				135,
+				206,
+				250,
+				255 
+			] 
+		},
+		{
+			"Layer": 0 
+		},
+		{
+			"LayerCoverChild": true 
+		},
+		{
+			"InheritParentVisible": true 
+		},
+		{
+			"Locked": false 
+		},
+		{
+			"SkyLightType": 0 
+		},
+		{
+			"SkyLightTexture": "sandboxSysId:\/\/SystemDefault\/Textures\/default_env.png" 
+		},
+		{
+			"CubeAssetID": "sandboxSysId:\/\/SystemDefault\/Textures\/default_env.png" 
+		},
+		{
+			"Intensity": 1 
+		},
+		{
+			"Color": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"BlendAmount": 1 
+		},
+		{
+			"AmbientSkyColor": [
+				130,
+				130,
+				140,
+				255 
+			] 
+		},
+		{
+			"AmbientEquatorColor": [
+				100,
+				100,
+				100,
+				255 
+			] 
+		},
+		{
+			"AmbientGroundColor": [
+				65,
+				65,
+				50,
+				255 
+			] 
+		},
+		{
+			"AmbientColor": [
+				130,
+				133,
+				140,
+				255 
+			] 
+		} 
+	] 
+} 

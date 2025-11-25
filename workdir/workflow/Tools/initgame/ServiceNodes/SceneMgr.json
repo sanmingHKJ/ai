@@ -1,0 +1,46 @@
+{
+	"ClassID": 571,
+	"ClassType": "SandboxSceneMgrService",
+	"NodeId": "75",
+	"attribute": [
+	],
+	"flags": 16,
+	"realNodeName": "SceneMgr",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 2 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"SceneConfigs": [
+				[
+					0,
+					"WorkSpace" 
+				] 
+			] 
+		},
+		{
+			"CurDefaultStartScene": 0 
+		},
+		{
+			"NextDefaultStartScene": 0 
+		} 
+	] 
+} 

@@ -1,0 +1,47 @@
+# Sample Skeleton System Specification
+# Generated in Phase 2A - shows IDs and signatures only, no behaviors or detailed content
+# This format is validated by build_global_registry.py
+
+system_spec:
+  id: "CombatSystem"
+  role: "combat"
+
+  data:
+    entities:
+      - name: "DamageEvent"    # name only, no fields in skeleton mode
+      - name: "CombatStats"
+      - name: "AttackData"
+
+  interface:
+    player_actions:
+      - id: "ACTION_ATTACK"
+        input: { target_id: "EntityId", attack_type: "string" }  # MUST be inline dict with types
+
+    queries:
+      - id: "get_damage_multiplier"
+        returns: "float"
+        args: { attacker_id: "EntityId" }  # MUST be inline dict with types
+      - id: "is_in_combat"
+        returns: "bool"
+        args: {}  # Use {} for queries with no arguments
+
+    commands:
+      - id: "APPLY_DAMAGE"
+        args: { target_id: "EntityId", amount: "int", damage_type: "string" }  # MUST be inline dict with types
+      - id: "START_COMBAT"
+        args: { attacker_id: "EntityId", defender_id: "EntityId" }
+
+  events:
+    emits:
+      - id: "HERO_DAMAGED"     # MUST be SCREAMING_SNAKE_CASE
+      - id: "HERO_KILLED"
+      - id: "COMBAT_STARTED"
+      - id: "COMBAT_ENDED"
+
+    subscribes:
+      - from: "InputSystem"    # MUST specify both 'from' and 'event'
+        event: "ATTACK_INPUT"
+      - from: "HeroSystem"
+        event: "HERO_SPAWNED"
+
+  behaviors: []               # No behaviors in skeleton mode

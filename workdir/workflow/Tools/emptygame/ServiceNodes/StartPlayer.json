@@ -1,0 +1,47 @@
+{
+	"ClassID": 113,
+	"ClassType": "StartPlayer",
+	"NodeId": "4",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "StartPlayer",
+	"reflex": [
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"PCMovementMode": 1 
+		},
+		{
+			"TouchMovementMode": 1 
+		},
+		{
+			"CameraMaxZoomDistance": 1200 
+		},
+		{
+			"CameraMinZoomDistance": 1 
+		},
+		{
+			"CameraMode": 0 
+		} 
+	] 
+} 

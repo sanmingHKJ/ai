@@ -1,0 +1,171 @@
+{
+	"ClassID": 145,
+	"ClassType": "UIImage",
+	"NodeId": "11047",
+	"attribute": [
+	],
+	"flags": 0,
+	"realNodeName": "icon",
+	"reflex": [
+		{
+			"Name": "icon" 
+		},
+		{
+			"Tag": 0 
+		},
+		{
+			"Enabled": true 
+		},
+		{
+			"SyncMode": 0 
+		},
+		{
+			"LocalSyncFlag": 0 
+		},
+		{
+			"ResourceDynamicLoad": false 
+		},
+		{
+			"IgnoreSafeMode": false 
+		},
+		{
+			"ResourceLoadMode": 0 
+		},
+		{
+			"Visible": true 
+		},
+		{
+			"RenderIndex": 0 
+		},
+		{
+			"Locked": false 
+		},
+		{
+			"Size": [
+				33,
+				37 
+			] 
+		},
+		{
+			"Scale": [
+				1,
+				1 
+			] 
+		},
+		{
+			"Rotation": 0 
+		},
+		{
+			"Pivot": [
+				0.5,
+				0.5 
+			] 
+		},
+		{
+			"IsKeepPosWhenPivotChange": false 
+		},
+		{
+			"IsNotifyEventStop": false 
+		},
+		{
+			"LineColor": [
+				0,
+				0,
+				0,
+				1 
+			] 
+		},
+		{
+			"FillColor": [
+				255,
+				255,
+				255,
+				255 
+			] 
+		},
+		{
+			"LineSize": 2 
+		},
+		{
+			"ClickPass": true 
+		},
+		{
+			"LayoutHRelation": 1 
+		},
+		{
+			"LayoutVRelation": 1 
+		},
+		{
+			"LayoutSizeRelation": 0 
+		},
+		{
+			"HRelationLength": 0 
+		},
+		{
+			"VRelationLength": 0 
+		},
+		{
+			"WidthRelationLength": 10000000 
+		},
+		{
+			"HeightRelationLength": 10000000 
+		},
+		{
+			"Active": true 
+		},
+		{
+			"Grayed": false 
+		},
+		{
+			"Icon": "sandboxSysId:\/\/ministudio\/ui\/icon_exit.png" 
+		},
+		{
+			"FillMethod": 0 
+		},
+		{
+			"FillOrigin": 0 
+		},
+		{
+			"FillClockwise": false 
+		},
+		{
+			"FillAmount": 1 
+		},
+		{
+			"IsAutoSize": true 
+		},
+		{
+			"Alpha": 1 
+		},
+		{
+			"ScaleType": 0 
+		},
+		{
+			"Scale9Grid": [
+				0,
+				0,
+				0,
+				0 
+			] 
+		},
+		{
+			"AutoTranslator": false 
+		},
+		{
+			"MaskUI": {
+				"__reflextype": "SandboxNode_Ref",
+				"_nodetype": "invalid",
+				"sceneobjid": 0 
+			} 
+		},
+		{
+			"BlurFilter": false 
+		},
+		{
+			"BlurSigma": 3 
+		},
+		{
+			"UIMaskMode": false 
+		} 
+	] 
+} 
