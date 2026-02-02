@@ -297,7 +297,7 @@ app.get('*', (req, res) => {
 // ============ 启动 ============
 async function start() {
   await getDB(); // 确保数据库初始化完成
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚰 桶装水配送系统已启动: http://localhost:${PORT}`);
     console.log(`📱 客户端: http://localhost:${PORT}`);
     console.log(`🔧 管理后台: http://localhost:${PORT}/admin`);
