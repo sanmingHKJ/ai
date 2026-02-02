@@ -1,0 +1,4 @@
+node_modules/
+water.db
+*.db-wal
+*.db-shm

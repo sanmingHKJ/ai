@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>管理后台 - 桶装水配送</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body class="admin-body">
+  <!-- 登录页 -->
+  <div id="loginPage" class="login-page">
+    <div class="login-box">
+      <div style="font-size:48px;margin-bottom:12px">🔐</div>
+      <h2>管理后台</h2>
+      <p>桶装水配送系统</p>
+      <input type="password" id="loginPass" placeholder="请输入管理密码" onkeyup="if(event.key==='Enter')doLogin()">
+      <br>
+      <button class="btn-primary" onclick="doLogin()">登录</button>
+    </div>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="mainApp" style="display:none">
+    <header class="header admin-header">
+      <div class="header-content">
+        <span class="logo">🔧</span>
+        <div>
+          <h1>管理后台</h1>
+          <p class="subtitle" id="adminSubtitle">桶装水配送系统</p>
+        </div>
+      </div>
+      <button class="phone-btn" onclick="refreshData()">🔄 刷新</button>
+    </header>
+
+    <!-- 仪表盘 -->
+    <div id="pageDashboard" class="page">
+      <section class="section">
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <h2 class="section-title">📦 待处理订单</h2>
+        <div id="pendingOrders"></div>
+      </section>
+    </div>
+
+    <!-- 订单管理 -->
+    <div id="pageOrders" class="page" style="display:none">
+      <section class="section">
+        <h2 class="section-title">📋 全部订单</h2>
+        <div class="tabs" id="orderTabs">
+          <button class="tab active" data-status="all" onclick="filterOrders('all', this)">全部</button>
+          <button class="tab" data-status="pending" onclick="filterOrders('pending', this)">待确认</button>
+          <button class="tab" data-status="confirmed" onclick="filterOrders('confirmed', this)">已确认</button>
+          <button class="tab" data-status="delivering" onclick="filterOrders('delivering', this)">配送中</button>
+          <button class="tab" data-status="completed" onclick="filterOrders('completed', this)">已完成</button>
+        </div>
+        <div id="orderList"></div>
+      </section>
+    </div>
+
+    <!-- 库存管理 -->
+    <div id="pageStock" class="page" style="display:none">
+      <section class="section">
+        <h2 class="section-title">🧴 商品库存</h2>
+        <div id="stockList"></div>
+      </section>
+    </div>
+
+    <!-- 设置页 -->
+    <div id="pageSettings" class="page" style="display:none">
+      <section class="section">
+        <h2 class="section-title">⚙️ 店铺设置</h2>
+        <div class="form-group">
+          <label>店铺名称</label>
+          <input type="text" id="setShopName">
+        </div>
+        <div class="form-group">
+          <label>联系电话</label>
+          <input type="tel" id="setPhone">
+        </div>
+        <div class="form-group">
+          <label>配送区域（逗号分隔）</label>
+          <input type="text" id="setAreas">
+        </div>
+        <div class="form-group">
+          <label>营业时间</label>
+          <input type="text" id="setHours">
+        </div>
+        <div class="form-group">
+          <label>公告信息</label>
+          <input type="text" id="setAnnouncement">
+        </div>
+        <div class="form-group">
+          <label>管理密码</label>
+          <input type="text" id="setAdminPass" placeholder="留空不修改">
+        </div>
+        <button class="btn-primary" onclick="saveSettings()" style="width:100%;margin-top:10px">💾 保存设置</button>
+
+        <div style="margin-top:30px;padding-top:20px;border-top:1px solid var(--border)">
+          <h2 class="section-title">📱 推送通知</h2>
+          <p style="font-size:13px;color:var(--text-light);margin-bottom:12px">
+            开启后，有新订单时手机会收到推送通知
+          </p>
+          <button class="btn-primary" onclick="subscribePush()" style="width:100%;background:var(--warning)">
+            🔔 开启订单推送通知
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- 底部导航 -->
+    <nav class="admin-nav">
+      <button class="nav-item active" onclick="switchPage('Dashboard', this)">
+        <span class="nav-icon">📊</span>首页
+      </button>
+      <button class="nav-item" onclick="switchPage('Orders', this)">
+        <span class="nav-icon">📋</span>订单
+      </button>
+      <button class="nav-item" onclick="switchPage('Stock', this)">
+        <span class="nav-icon">🧴</span>库存
+      </button>
+      <button class="nav-item" onclick="switchPage('Settings', this)">
+        <span class="nav-icon">⚙️</span>设置
+      </button>
+    </nav>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

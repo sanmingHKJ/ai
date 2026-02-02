@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>桶装水配送 - 海淀羊坊店</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+</head>
+<body>
+  <div id="app">
+    <!-- 顶部横幅 -->
+    <header class="header">
+      <div class="header-content">
+        <span class="logo">💧</span>
+        <div>
+          <h1 id="shopName">桶装水配送</h1>
+          <p class="subtitle" id="announcement">当天下单，当天送达</p>
+        </div>
+      </div>
+      <a href="tel:15439308410" class="phone-btn">📞 拨打电话</a>
+    </header>
+
+    <!-- 公告栏 -->
+    <div class="notice" id="noticeBar" style="display:none">
+      <span class="notice-icon">📢</span>
+      <span id="noticeText"></span>
+    </div>
+
+    <!-- 商品列表 -->
+    <section class="section">
+      <h2 class="section-title">🧴 选择商品</h2>
+      <div class="product-list" id="productList"></div>
+    </section>
+
+    <!-- 配送信息 -->
+    <section class="section" id="orderSection" style="display:none">
+      <h2 class="section-title">📋 配送信息</h2>
+      <form id="orderForm">
+        <div class="form-group">
+          <label>姓名</label>
+          <input type="text" id="customerName" placeholder="您的姓名" required>
+        </div>
+        <div class="form-group">
+          <label>手机号</label>
+          <input type="tel" id="customerPhone" placeholder="联系手机号" required pattern="1[3-9]\d{9}">
+        </div>
+        <div class="form-group">
+          <label>配送街道</label>
+          <select id="customerStreet" required>
+            <option value="">请选择街道</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>详细地址</label>
+          <input type="text" id="customerAddress" placeholder="小区/楼号/门牌号" required>
+        </div>
+        <div class="form-group">
+          <label>备注（选填）</label>
+          <input type="text" id="customerNote" placeholder="如：放门口、下午送等">
+        </div>
+      </form>
+    </section>
+
+    <!-- 购物车底栏 -->
+    <div class="cart-bar" id="cartBar" style="display:none">
+      <div class="cart-info">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cartCount">0</span>
+        <span class="cart-total">¥<span id="cartTotal">0</span></span>
+      </div>
+      <button class="btn-submit" id="submitBtn" onclick="submitOrder()">提交订单</button>
+    </div>
+
+    <!-- 订单成功弹窗 -->
+    <div class="modal" id="successModal" style="display:none">
+      <div class="modal-content">
+        <div class="modal-icon">✅</div>
+        <h3>下单成功！</h3>
+        <p>订单号：<span id="orderNo"></span></p>
+        <p>合计：<span class="price-highlight" id="orderTotal"></span></p>
+        <div class="payment-section">
+          <p>请扫码付款 👇</p>
+          <div class="qr-placeholder" id="qrArea">
+            <p>💡 店主收款码</p>
+            <p class="small">加微信/扫码付款后配送</p>
+            <a href="tel:15439308410" class="call-link">📞 15439308410</a>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="closeModal()">知道了</button>
+      </div>
+    </div>
+
+    <!-- 底部订单查询 -->
+    <section class="section query-section">
+      <h2 class="section-title">🔍 查询我的订单</h2>
+      <div class="query-row">
+        <input type="tel" id="queryPhone" placeholder="输入手机号查询">
+        <button class="btn-small" onclick="queryOrders()">查询</button>
+      </div>
+      <div id="queryResult"></div>
+    </section>
+
+    <!-- 底部信息 -->
+    <footer class="footer">
+      <p>配送范围：海淀区羊坊店及周边街道</p>
+      <p>营业时间：08:00 - 20:00</p>
+      <p>📞 <a href="tel:15439308410">15439308410</a></p>
+    </footer>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
