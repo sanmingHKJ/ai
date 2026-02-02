@@ -305,4 +305,7 @@ async function start() {
   });
 }
 
-start().catch(console.error);
+start().catch(err => {
+  console.error('❌ 启动失败:', err);
+  process.exit(1);
+});

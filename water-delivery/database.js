@@ -93,9 +93,7 @@ class DBWrapper {
 async function getDB() {
   if (db) return db;
 
-  const SQL = await initSqlJs({
-    locateFile: file => path.join(__dirname, 'node_modules', 'sql.js', 'dist', file)
-  });
+  const SQL = await initSqlJs();
 
   let database;
   if (fs.existsSync(DB_PATH)) {
