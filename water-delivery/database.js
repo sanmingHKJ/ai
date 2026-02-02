@@ -2,7 +2,9 @@ const initSqlJs = require('sql.js');
 const fs = require('fs');
 const path = require('path');
 
-const DB_PATH = path.join(__dirname, 'water.db');
+const DB_PATH = process.env.NODE_ENV === 'production' 
+  ? path.join('/tmp', 'water.db') 
+  : path.join(__dirname, 'water.db');
 
 let db;
 
@@ -91,7 +93,9 @@ class DBWrapper {
 async function getDB() {
   if (db) return db;
 
-  const SQL = await initSqlJs();
+  const SQL = await initSqlJs({
+    locateFile: file => path.join(__dirname, 'node_modules', 'sql.js', 'dist', file)
+  });
 
   let database;
   if (fs.existsSync(DB_PATH)) {
